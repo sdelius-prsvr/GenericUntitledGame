@@ -1,0 +1,45 @@
+*, ::after, ::before {
+    padding: none;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: calc(1em + 0.5rem);
+}
+
+body {
+    background-color:blue
+}
+
+.box {
+    padding: 10px;
+    border: solid white 5px;
+    border-radius: 15px;
+    box-shadow: 10px 10px #0007;
+    text-shadow: 3% 3%;
+    background: black;
+    color: white;
+}
+
+#left {
+    display: grid;
+    grid-auto-flow: row;
+    width: 100%;
+}
+
+
+
+#everything {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#ellipse {
+    padding: 60px 15px;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+}
+
+#viewer {
+    width: 256px;
+    height: 256px;
+    border: 2px black solid;
+}
