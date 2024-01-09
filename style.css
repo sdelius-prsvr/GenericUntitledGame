@@ -20,7 +20,7 @@ button {
 }
 
 body {
-    background-color:blue
+    background-image: url(assets/tiledstone.jpg)
 }
 
 .box {
@@ -40,26 +40,12 @@ body {
     height: fit-content;
 }
 
-/* #right {
-    display: grid;
-    grid-auto-flow: row;
-    width: fit-content;
-    height: fit-content;
-} */
-
 #right-top, #everything {
     display: grid;
     grid-auto-flow: column;
     width: fit-content;
     height: fit-content;
 }
-
-/* #everything {
-    display: grid;
-    grid-auto-flow: column;
-    width: fit-content;
-    height: fit-content;
-} */
 
 #ellipse {
     padding: 60px 15px;
@@ -75,4 +61,5 @@ body {
     border: 3px black solid;
     box-shadow: 10px 10px #0007;
     margin: 10px;
+    background-image: url('/assets/backgrounds/moonrise/Watercolor_Moonrise_015.jpeg');
 }
