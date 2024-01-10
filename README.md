@@ -29,6 +29,7 @@ This is an untitled game in the style of a visual novel doujin game, but with no
     The above are goals and may be trimmed or expanded upon.
     Stretch goals:
 
-    I have some sunrise, sunset, moonlight and nighttime images that I'd like to include, maybe using a clock function
+    I have some sunrise, sunset, moonlight and nighttime images that I'd like to include, maybe using a clock function.
+	I may turn the ellipse into a cabochon that changes colors to cryptically help indicate what to do.
 	I may include both good and bad endings.
 
