@@ -8,7 +8,8 @@ function rNG(min, max) {
 
 // constants for page elements
 const viewer = document.querySelector('#viewer');
-const dialogueBox = document.querySelector('#dialogueBox')
+const dialogueBox = document.querySelector('#dialogueBox');
+const dialogueText = document.querySelector('#dialogueBox');
 
 // constants for menu buttons
 const cluesBtn = document.querySelector('#cluesBtn');
@@ -46,61 +47,72 @@ const bgFunc = (curLoc, min, max) => {
 
 const preNumSet =  []
 
-const dialogueFunc = (curLoc, curNum) => {
-
+const dialogueFunc = (curLoc) => {
+    dialogueBox.innerText=`You stand before a${curLoc}.`;
 }
 
 // functions for location buttons
 castleBtn.onclick = () => {
-    dialogueBox.innerHTML='<p>A castle rises before you.</p>';
+    dialogueFunc(' castle');
     console.log(bgFunc('castle',1,7));
-    dialogueBox.p.innerText='You stand before a castle.';
 }
 
 churchBtn.onclick = () => {
+    dialogueFunc(' church');
     bgFunc('church',1,3);
 }
 
 estateBtn.onclick = () => {
+    dialogueFunc('n estate');
     bgFunc('estate',1,5);
 }
 
 forestBtn.onclick = () => {
+    dialogueFunc(' forest');
     bgFunc('forest',1,8);
 }
 
 gardenBtn.onclick = () => {
+    dialogueFunc(' garden');
     bgFunc('garden',1,6);
 }
 
 greenhouseBtn.onclick = () => {
+    dialogueFunc(' greenhouse');
     bgFunc('greenhouse',1,6);
 }
 
 hutBtn.onclick = () => {
+    dialogueFunc(' hut');
     bgFunc('hut',1,12);
 }
 
 lakeBtn.onclick = () => {
+    dialogueFunc(' lake');
     bgFunc('lake',1,7);
 }
 
 libraryBtn.onclick = () => {
+    dialogueFunc(' library');
     bgFunc('library',1,4);
 }
 
 lighthouseBtn.onclick = () => {
+    dialogueFunc(' lighthouse');
     bgFunc('lighthouse',1,4);
 }
 
 mountainBtn.onclick = () => {
+    dialogueFunc(' mountain');
     bgFunc('mountain',1,5);
 }
 
 riverBtn.onclick = () => {
+    dialogueFunc(' river');
     bgFunc('river',1,13);
 }
 
 towerBtn.onclick = () => {
+    dialogueFunc(' tower');
     bgFunc('tower',1,7);
 }
