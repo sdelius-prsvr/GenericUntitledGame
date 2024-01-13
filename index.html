@@ -10,16 +10,18 @@
 <body>
     <div id="everything">
         <div id="left">
-            <div id="ellipse"></div>
-            <div class="box" id="menu">
-                <h3>Menu</h3>
-                <li><button id="menuBtn1"></button></li>
-                <li><button id="menuBtn2"></button></li>
-                <li><button id="menuBtn3"></button></li>
-                <li><button id="menuBtn4"></button></li>
+            <!-- <div id="ellipse"></div> -->
+            <div class="box" id="inventory">
+                <span class="boxHeader" id="invHeader">Inventory</span>
+                <hr>
+                <li><button id="invBtn1"></button></li>
+                <li><button id="invBtn2"></button></li>
+                <li><button id="invBtn3"></button></li>
+                <li><button id="invBtn4"></button></li>
             </div>
             <div class="box" id="actions">
-                <h3>Actions</h3>
+                <span class="boxHeader" id="actHeader">Actions</span>
+                <hr>
                 <li><button id="actBtn1"></button></li>
                 <li><button id="actBtn2"></button></li>
                 <li><button id="actBtn3"></button></li>
@@ -28,30 +30,22 @@
         </div>
         <div id="right">
             <div id="right-top">
-                <div id="viewer" style="background-image: url('/assets/backgrounds/statue1.jpeg');"><img src="" alt=""></div>
+                <div id="viewer" ><img src="" alt=""></div>
                 <div class="box" id="navigation">
-                    <h3>Navigation</h3>
+                    <span class="boxHeader" id="navHeader">Navigation</span>
+                    <hr>
                     <li><button id="navBtn1">navBtn1</button></li>
                     <li><button id="navBtn2">navBtn2</button></li>
                     <li><button id="navBtn3">navBtn3</button></li>
                     <li><button id="navBtn4">navBtn4</button></li>
-                    <!-- <li><button id="castleBtn">Castle</button></li>
-                    <li><button id="churchBtn">Church</button></li>
-                    <li><button id="estateBtn">Estate</button></li>
-                    <li><button id="forestBtn">Forest</button></li>
-                    <li><button id="gardenBtn">Garden</button></li>
-                    <li><button id="greenhouseBtn">Greenhouse</button></li>
-                    <li><button id="hutBtn">Hut</button></li>
-                    <li><button id="lakeBtn">Lake</button></li>
-                    <li><button id="libraryBtn">Library</button></li>
-                    <li><button id="lighthouseBtn">Lighthouse</button></li>
-                    <li><button id="mountainBtn">Mountain</button></li>
-                    <li><button id="riverBtn">River</button></li>
-                    <li><button id="towerBtn">Tower</button></li> -->
                 </div>
             </div>
             <div class="right-bottom">
-                <div class="box" id="dialogueBox"></div>
+                <div class="box" id="dialogueBox">
+                    <span class="boxHeader" id="dialogueHeader"></span>
+                    <hr>
+                    <span id="dialogueText"></span>
+                </div>
             </div>
         </div>
 

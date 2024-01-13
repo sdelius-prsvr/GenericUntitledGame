@@ -33,6 +33,14 @@ body {
     margin: 10px;
 }
 
+.boxHeader { 
+    display: block;
+    text-align: center;
+    font-size: 1.17em;
+    margin: 0;
+    font-weight: bold;
+}
+
 #left, #right {
     display: grid;
     grid-auto-flow: row;
