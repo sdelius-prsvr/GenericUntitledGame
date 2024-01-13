@@ -13,3 +13,7 @@ Use objects to store item, clue, note, and danger locations.
 Create function to compare current location to object locations.
 
 Create functions for Enter, Flee, Item, Search, Talk buttons.
+
+Add time value and include in functions
+
+Set up media query for vertical display.
