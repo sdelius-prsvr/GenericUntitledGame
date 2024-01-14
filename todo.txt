@@ -1,19 +1,15 @@
-Add text for each different terrain type.
+Fill out sMtns branch.
 
-Set up initialization function using rNG for item locations, clue locations.
+Fill out forest branch
 
-Set up arrays for clues, notes and inventory. Set up function for their buttons to have them display in the viewer.
+Create lost in the wood function using rNG.
 
-Use object to store player location.
+Fill out estate branch.
 
-{loc, num}
+Create lost in the gardens function using rNG.
 
-Use objects to store item, clue, note, and danger locations.
+Create switch function for search.
 
-Create function to compare current location to object locations.
-
-Create functions for Enter, Flee, Item, Search, Talk buttons.
-
-Add time value and include in functions
+Create inventory arrays and functions (items, artifacts, keys, notes).
 
 Set up media query for vertical display.

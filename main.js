@@ -98,10 +98,10 @@ let newMoonHigh = ()=>{};
 let newMoonLow = ()=>{};
 
 let nMtns1 = ()=>{};
-let nMtnsRiver = ()=>{};
-let nMtnsLakeDay = ()=>{};
-let nMtnsLakeDusk = ()=>{};
-let nMtnsLakeNight = ()=>{};
+let nMtnsLake1 = ()=>{};
+let nMtnsLake2 = ()=>{};
+let nMtnsRiver1 = ()=>{};
+let nMtnsRiver2 = ()=>{};
 let tower = ()=>{};
 let towerLibrary = ()=>{};
 
@@ -112,39 +112,181 @@ let sMtnsLakeDusk = ()=>{};
 let sMtnsLakeNight = ()=>{};
 let sMtnsRiver = ()=>{};
 
+let search = ()=>{};
 
 //define functions for each in-game location
 statue1 = ()=>{
     dialogueHeader.innerHTML = 'Statue at the Crossroads';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/statue1.jpeg')`;
-    navBtn1.innerHTML = 'N: Mountains';
+    navBtn1.innerHTML = 'N: Foothills';
     navBtn2.innerHTML = 'W: Forest';
     navBtn3.innerHTML = 'S: Mountains';
     navBtn4.innerHTML = '';
     navBtn1.onclick = nMtns1;
     navBtn2.onclick = forestPath1;
     navBtn3.onclick = sMtns1;
-    navBtn4.onclick = '';
+    navBtn4.onclick = '';	
+    actBtn1.innerHTML = '';
+    actBtn2.innerHTML = '';
+    actBtn3.innerHTML = '';
+    actBtn4.innerHTML = '';
+    actBtn1.onclick = '';
+    actBtn2.onclick = ''
+    actBtn3.onclick = '';
+    actBtn4.onclick = ''
     i=0
-    diaTxt = 'You find yourself standing on a dirt road in front of an admittedly odd statue of an angel. The road heads into the mountains to the north and the south. Opposite the statue, a path leads into a large forest to the west.';
+    diaTxt = `You find yourself standing on a dirt road in front of an admittedly odd statue of an angel. The road heads into the foothills of the mountains to the North and to the South another range rises sharply with its imposing peaks. Opposite the statue, a path leads into a large forest to the West.`;
     dialogueFunc();
 };
 
 nMtns1 = ()=>{
-    dialogueHeader.innerHTML = 'The Northern Mountains';
+    dialogueHeader.innerHTML = 'The Northern Mountains: Foothills';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/nMtns1.jpeg')`;
     navBtn1.innerHTML = 'N: Mountains';
     navBtn2.innerHTML = 'S: Statue';
     navBtn3.innerHTML = '';
     navBtn4.innerHTML = '';
-    navBtn1.onclick = nMtnsRiver;
+    navBtn1.onclick = nMtnsRiver1;
     navBtn2.onclick = statue1;
     navBtn3.onclick = '';
-    navBtn4.onclick = '';
+    navBtn4.onclick = '';	
+    actBtn1.innerHTML = '';
+    actBtn2.innerHTML = '';
+    actBtn3.innerHTML = '';
+    actBtn4.innerHTML = '';
+    actBtn1.onclick = '';
+    actBtn2.onclick = ''
+    actBtn3.onclick = '';
+    actBtn4.onclick = ''
     i=0
-    diaTxt = 'After a long hike you are in the foothills of the sloping Northern Mountains.  The road continues away and to the north beyond your sight.  Behind you the road goes back to the crossroads and its uncanny statue.';
+    diaTxt = `After a long hike you are in the foothills of the sloping Northern Mountains.  The road continues away and to the North beyond your sight.  Behind you the road goes back to the crossroads and its uncanny statue.`;
+    dialogueFunc();
+};
+
+nMtnsRiver1 = ()=>{
+    dialogueHeader.innerHTML = 'River in the Northern Mountains';
+    dialogueText.innerHTML = '';
+    viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/nMtnsRiver1.jpeg')`;
+    navBtn1.innerHTML = 'W: Riverbank';
+    navBtn2.innerHTML = 'E: Riverbank';
+    navBtn3.innerHTML = 'S: Foothills';
+    navBtn4.innerHTML = '';
+    navBtn1.onclick = forestRiver2;
+    navBtn2.onclick = nMtnsLake1;
+    navBtn3.onclick = nMtns1;
+    navBtn4.onclick = '';	
+    actBtn1.innerHTML = '';
+    actBtn2.innerHTML = '';
+    actBtn3.innerHTML = '';
+    actBtn4.innerHTML = '';
+    actBtn1.onclick = '';
+    actBtn2.onclick = ''
+    actBtn3.onclick = '';
+    actBtn4.onclick = ''
+    i=0
+    diaTxt = `The road was rather winding, though you're not sure why - it seemed to go over every hill and around none of them.  Before you a river rages its way West with no crossings in sight.  You're at a T intersection: two branches follow the riverbank East and West, while one goes back South.`;
+    dialogueFunc();
+};
+
+nMtnsLake1 = ()=>{
+    dialogueHeader.innerHTML = 'Lake in the Northern Mountains, South Shore';
+    dialogueText.innerHTML = '';
+    viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/nMtnsLake1.jpeg')`;
+    navBtn1.innerHTML = 'W: Riverbank';
+    navBtn2.innerHTML = 'E: Lakeshore';
+    navBtn3.innerHTML = '';
+    navBtn4.innerHTML = '';
+    navBtn1.onclick = nMtnsRiver1;
+    navBtn2.onclick = nMtnsLake2;
+    navBtn3.onclick = '';
+    navBtn4.onclick = '';	
+    actBtn1.innerHTML = '';
+    actBtn2.innerHTML = '';
+    actBtn3.innerHTML = '';
+    actBtn4.innerHTML = '';
+    actBtn1.onclick = '';
+    actBtn2.onclick = ''
+    actBtn3.onclick = '';
+    actBtn4.onclick = ''
+    i=0
+    diaTxt = `You've walked for quite some time, and come upon a lake which seems to be the source of the river.  The road, now more of a path, wends its way along the lakeshore to the East with a sheer cliff to the South and the lake itself to the North.  You can either go back West along the riverbank or carry on.`;
+    dialogueFunc();
+};
+
+nMtnsLake2 = ()=>{
+    dialogueHeader.innerHTML = 'Lake in the Northern Mountains, East Shore';
+    dialogueText.innerHTML = '';
+    viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/nMtnsLake2.jpeg')`;
+    navBtn1.innerHTML = 'N: Lakeshore';
+    navBtn2.innerHTML = 'S: Lakeshore';
+    navBtn3.innerHTML = '';
+    navBtn4.innerHTML = '';
+    navBtn1.onclick = tower;
+    navBtn2.onclick = nMtnsLake1;
+    navBtn3.onclick = '';
+    navBtn4.onclick = '';	
+    actBtn1.innerHTML = '';
+    actBtn2.innerHTML = '';
+    actBtn3.innerHTML = '';
+    actBtn4.innerHTML = '';
+    actBtn1.onclick = '';
+    actBtn2.onclick = ''
+    actBtn3.onclick = '';
+    actBtn4.onclick = ''
+    i=0
+    diaTxt = `The lakeshore has come around so that you are facing West now as you look out across it.  The sun is beginning to dip low towards the horizon.  While the cliff has given way, thick brambles block the way East.  Your only option is the road: continue to follow it North along the lakeshore, or turn back South.`;
+    dialogueFunc();
+};
+
+tower = ()=>{
+    dialogueHeader.innerHTML = 'Tower along the Lake, Northern Mountains';
+    dialogueText.innerHTML = '';
+    viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/tower.jpeg')`;
+    navBtn1.innerHTML = 'S: Lakeshore';
+    navBtn2.innerHTML = '';
+    navBtn3.innerHTML = '';
+    navBtn4.innerHTML = '';
+    navBtn1.onclick = nMtnsLake2;
+    navBtn2.onclick = '';
+    navBtn3.onclick = '';
+    navBtn4.onclick = '';	
+    actBtn1.innerHTML = '';
+    actBtn2.innerHTML = 'Enter';
+    actBtn3.innerHTML = '';
+    actBtn4.innerHTML = '';
+    actBtn1.onclick = '';
+    actBtn2.onclick = towerLibrary;
+    actBtn3.onclick = '';
+    actBtn4.onclick = '';
+    i=0
+    diaTxt = `Following an inlet on the now convoluted North shoreline, you are amazed to see a tower.  You're amazed not only that you didn't see it sooner, but by its height and impossible architecture.  Still, there's something peaceful about the way the lights of the tower compete with the waning daylight behind it.`;
+    dialogueFunc();
+};
+
+towerLibrary = ()=>{
+    dialogueHeader.innerHTML = 'Tower Library, Lake in Nothern Mountains';
+    dialogueText.innerHTML = '';
+    viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/towerLibrary.jpeg')`;
+    navBtn1.innerHTML = '';
+    navBtn2.innerHTML = '';
+    navBtn3.innerHTML = '';
+    navBtn4.innerHTML = '';
+    navBtn1.onclick = '';
+    navBtn2.onclick = '';
+    navBtn3.onclick = '';
+    navBtn4.onclick = '';
+    actBtn1.innerHTML = 'Search';
+    actBtn2.innerHTML = '';
+    actBtn3.innerHTML = 'Leave';
+    actBtn4.innerHTML = '';
+    actBtn1.onclick = search;
+    actBtn2.onclick = ''
+    actBtn3.onclick = tower;
+    actBtn4.onclick = ''
+    i=0
+    diaTxt = `You enter the tower and find yourself inside a grand library.  You're certain there were many other windows and rooms to this tower, but the only door is the one you entered by.`;
     dialogueFunc();
 };
 
@@ -159,9 +301,17 @@ forestPath1 = ()=>{
     navBtn1.onclick = forestPath2;
     navBtn2.onclick = statue1;
     navBtn3.onclick = '';
-    navBtn4.onclick = '';
+    navBtn4.onclick = '';	
+    actBtn1.innerHTML = '';
+    actBtn2.innerHTML = '';
+    actBtn3.innerHTML = '';
+    actBtn4.innerHTML = '';
+    actBtn1.onclick = '';
+    actBtn2.onclick = ''
+    actBtn3.onclick = '';
+    actBtn4.onclick = ''
     i=0
-    diaTxt = 'A brief walk has brought to the edge of the forest.  The path continues westward into the forest for some distance, winding away from your sight.  Behind you, the path goes east to the crossroad and its statue.';
+    diaTxt = `A brief walk has brought to the edge of the forest.  The path continues westward into the forest for some distance, winding away from your sight.  Behind you, the path goes East to the crossroad and its statue.`;
     dialogueFunc();
 };
 
@@ -176,7 +326,15 @@ sMtns1 = ()=>{
     navBtn1.onclick = statue1;
     navBtn2.onclick = sMtnsLakeDay
     navBtn3.onclick = '';
-    navBtn4.onclick = '';
+    navBtn4.onclick = '';	
+    actBtn1.innerHTML = '';
+    actBtn2.innerHTML = '';
+    actBtn3.innerHTML = '';
+    actBtn4.innerHTML = '';
+    actBtn1.onclick = '';
+    actBtn2.onclick = ''
+    actBtn3.onclick = '';
+    actBtn4.onclick = ''
     i=0
     diaTxt = `The sharp peaks of the Southern Mountains rise before you.  You're a bit tired from your long walk, but after a short rest you feel ready to go on. Ahead, the road goes around a hill and disappears.  Behind you the strange statue, long out of sight, stands sentinel over the crossroads.`;
     dialogueFunc();
