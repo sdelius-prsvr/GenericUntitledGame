@@ -136,7 +136,7 @@ statue1 = ()=>{
     actBtn3.onclick = '';
     actBtn4.onclick = ''
     i=0
-    diaTxt = `You find yourself standing on a dirt road in front of an admittedly odd statue of an angel. The road heads into the foothills of the mountains to the North, while to the South it enters another range which rises sharply with imposing peaks. Opposite the statue, a path leads into a large forest to the West.`;
+    diaTxt = `You find yourself standing on a dirt road in front of an admittedly odd statue of an angel. The road heads into the foothills of the mountains to the North, while to the South it enters another range which rises sharply with imposing peaks. Opposite the statue, a path leads West into a large forest.`;
     dialogueFunc();
 };
 

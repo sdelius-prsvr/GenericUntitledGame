@@ -8,49 +8,38 @@
     <title>Generic Untitled Game</title>
 </head>
 <body>
-    <div id="everything">
-        <div id="left">
-            <!-- <div id="ellipse"></div> -->
-            <div class="box" id="inventory">
-                <span class="boxHeader" id="invHeader">Inventory</span>
-                <hr>
-                <li><button id="invBtn1"></button></li>
-                <li><button id="invBtn2"></button></li>
-                <li><button id="invBtn3"></button></li>
-                <li><button id="invBtn4"></button></li>
-            </div>
-            <div class="box" id="actions">
-                <span class="boxHeader" id="actHeader">Actions</span>
-                <hr>
-                <li><button id="actBtn1"></button></li>
-                <li><button id="actBtn2"></button></li>
-                <li><button id="actBtn3"></button></li>
-                <li><button id="actBtn4"></button></li>
-            </div>
+    <div id="interface">
+        <div id="viewer"><img src="assets/placeholder.png" alt=""></div>
+        <div class="box" id="dialogueBox">
+            <span class="boxHeader" id="dialogueHeader"></span>
+            <hr>
+            <span id="dialogueText"></span>
+        </div> 
+        <div id="gemstone"></div>
+        <div class="box" id="actions">
+            <span class="boxHeader" id="actHeader">Actions</span>
+            <hr>
+            <li><button id="actBtn1"></button></li>
+            <li><button id="actBtn2"></button></li>
+            <li><button id="actBtn3"></button></li>
+            <li><button id="actBtn4"></button></li>
         </div>
-        <div id="right">
-            <div id="right-top">
-                <div id="viewer" ><img src="" alt=""></div>
-                <div class="box" id="navigation">
-                    <span class="boxHeader" id="navHeader">Navigation</span>
-                    <hr>
-                    <li><button id="navBtn1"></button></li>
-                    <li><button id="navBtn2"></button></li>
-                    <li><button id="navBtn3"></button></li>
-                    <li><button id="navBtn4"></button></li>
-                </div>
-            </div>
-            <div class="right-bottom">
-                <div class="box" id="dialogueBox">
-                    <span class="boxHeader" id="dialogueHeader"></span>
-                    <hr>
-                    <span id="dialogueText"></span>
-                </div>
-            </div>
+        <div class="box" id="navigation">
+            <span class="boxHeader" id="navHeader">Navigation</span>
+            <hr>
+            <li><button id="navBtn1"></button></li>
+            <li><button id="navBtn2"></button></li>
+            <li><button id="navBtn3"></button></li>
+            <li><button id="navBtn4"></button></li>
         </div>
-
+        <div class="box" id="inventory">
+            <span class="boxHeader" id="invHeader">Inventory</span>
+            <hr>
+            <li><button id="invBtn1"></button></li>
+            <li><button id="invBtn2"></button></li>
+            <li><button id="invBtn3"></button></li>
+            <li><button id="invBtn4"></button></li>
+        </div>
     </div>
-
-    
 </body>
 </html>
