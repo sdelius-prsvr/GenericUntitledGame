@@ -76,26 +76,26 @@ hr {
 
 #dialogueBox {
     grid-column: 8 / 35;
-    grid-row: 23 / 32;
+    grid-row: 26 / 35;
     margin: 4px;
 }
 
 #actions {
     grid-column: 1 / 9;
     grid-row: 24 / 32;
-    margin: 4px;
+    margin: 0px;
 }
 
 #navigation {
     grid-column: 34 / 42;
     grid-row: 24 / 32;
-    margin: 4px;
+    margin: 0px;
 }
 
 #inventory {
     grid-column: 34 / 42;
     grid-row: 16 / 24;
-    margin: 4px;
+    margin: 0px;
 }
 
 #gemstone {
@@ -105,7 +105,7 @@ hr {
     border-radius: 50%;
     background-color: #ddde;
     box-shadow: 10px 6px #0005;
-    margin: 4px;
+    margin: 4px 16px;
 }
 
 
