@@ -193,27 +193,29 @@ let currentLostNum = 0;
 let previousLostNum = 0;
 let lostCount = 0;
 
+let currentLocation = '';
+let previousLocation = '';
 
 //define functions for each in-game location
 statue1 = ()=>{
     statue1VisitCount ++;
     previousLocation = currentLocation;
-    currentLocation = statue1;
+    currentLocation = 'statue1';
     dialogueHeader.innerHTML = 'Statue at the Crossroads';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/statue1.jpeg')`;
-    navBtn1.innerHTML = 'North: Foothills';
-    navBtn2.innerHTML = 'West: Forest';
+    navBtn1.innerHTML = 'N. Foothills';
+    navBtn2.innerHTML = 'W. Forest Path';
     navBtn3.innerHTML = '';
-    navBtn4.innerHTML = 'South: Mountains';
+    navBtn4.innerHTML = 'S. Mountains';
     navBtn1.onclick = nMtns1;
     navBtn2.onclick = forestPath1;
     navBtn3.onclick = '';
     navBtn4.onclick = sMtns1;	
-    actBtn1.innerHTML = '';
-    actBtn2.innerHTML = '';
-    actBtn3.innerHTML = '';
-    actBtn4.innerHTML = '';
+    actBtn1.innerHTML = 'Search';
+    actBtn2.innerHTML = 'Enter';
+    actBtn3.innerHTML = 'Fight';
+    actBtn4.innerHTML = 'Flee';
     actBtn1.onclick = '';
     actBtn2.onclick = '';
     actBtn3.onclick = '';
@@ -226,14 +228,14 @@ statue1 = ()=>{
 nMtns1 = ()=>{
     nMtns1VisitCount ++;
     previousLocation = currentLocation;
-    currentLocation = nMtns1;
+    currentLocation = 'nMtns1';
     dialogueHeader.innerHTML = 'The Northern Mountains: Foothills';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/nMtns1.jpeg')`;
-    navBtn1.innerHTML = 'North: Mountains';
+    navBtn1.innerHTML = 'N. Mountains';
     navBtn2.innerHTML = '';
     navBtn3.innerHTML = '';
-    navBtn4.innerHTML = 'South: Statue';
+    navBtn4.innerHTML = 'S. To Statue';
     navBtn1.onclick = nMtnsRiver1;
     navBtn2.onclick = '';
     navBtn3.onclick = '';
@@ -254,14 +256,14 @@ nMtns1 = ()=>{
 nMtnsRiver1 = ()=>{
     nMtnsRiver1VisitCount++;
     previousLocation = currentLocation;
-    currentLocation = nMtnsRiver1;
+    currentLocation = 'nMtnsRiver1';
     dialogueHeader.innerHTML = 'River in the Northern Mountains';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/nMtnsRiver1.jpeg')`;
     navBtn1.innerHTML = '';
-    navBtn2.innerHTML = 'West: Riverbank';
-    navBtn3.innerHTML = 'East: Riverbank';
-    navBtn4.innerHTML = 'South: Foothills';
+    navBtn2.innerHTML = 'W. Riverbank';
+    navBtn3.innerHTML = 'E. Riverbank';
+    navBtn4.innerHTML = 'S. Foothills';
     navBtn1.onclick = '';
     navBtn2.onclick = nMtnsRiver2;
     navBtn3.onclick = nMtnsLake1;
@@ -280,15 +282,15 @@ nMtnsRiver1 = ()=>{
 };
 
 nMtnsRiver2 = ()=>{
-    VisitCount++;
+    nMtnsRiver2VisitCount++;
     previousLocation = currentLocation;
-    currentLocation = nMtnsRiver2;
+    currentLocation = 'nMtnsRiver2';
     dialogueHeader.innerHTML = 'River in the Northern Mountains';
     dialogueText.innerHTML = '';
-    viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/nMtnsRiver1.jpeg')`;
+    viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/nMtnsRiver2.jpeg')`;
     navBtn1.innerHTML = '';
-    navBtn2.innerHTML = 'West: Riverbank';
-    navBtn3.innerHTML = 'East: Riverbank';
+    navBtn2.innerHTML = 'W. Riverbank';
+    navBtn3.innerHTML = 'E. Riverbank';
     navBtn4.innerHTML = '';
     navBtn1.onclick = '';
     navBtn2.onclick = forestLakeN;
@@ -308,13 +310,13 @@ nMtnsRiver2 = ()=>{
 };
 
 nMtnsLake1 = ()=>{
-    VisitCount++;
+    nMtnsLake1VisitCount++;
     dialogueHeader.innerHTML = 'Lake in the Northern Mountains, South Shore';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/nMtnsLake1.jpeg')`;
     navBtn1.innerHTML = '';
-    navBtn2.innerHTML = 'West: Riverbank';
-    navBtn3.innerHTML = 'East: Lakeshore';
+    navBtn2.innerHTML = 'W. Riverbank';
+    navBtn3.innerHTML = 'E. Lakeshore';
     navBtn4.innerHTML = '';
     navBtn1.onclick = '';
     navBtn2.onclick = nMtnsRiver1;
@@ -334,14 +336,14 @@ nMtnsLake1 = ()=>{
 };
 
 nMtnsLake2 = ()=>{
-    VisitCount++;
+    nMtnsLake2VisitCount++;
     dialogueHeader.innerHTML = 'Lake in the Northern Mountains, East Shore';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/nMtnsLake2.jpeg')`;
-    navBtn1.innerHTML = 'North: Lakeshore';
+    navBtn1.innerHTML = 'N. Lakeshore';
     navBtn2.innerHTML = '';
     navBtn3.innerHTML = '';
-    navBtn4.innerHTML = 'South: Lakeshore';
+    navBtn4.innerHTML = 'S. Lakeshore';
     navBtn1.onclick = tower;
     navBtn2.onclick = '';
     navBtn3.onclick = '';
@@ -360,14 +362,14 @@ nMtnsLake2 = ()=>{
 };
 
 tower = ()=>{
-    VisitCount++;
+    towerVisitCount++;
     dialogueHeader.innerHTML = 'Tower along the Lake, Northern Mountains';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/tower.jpeg')`;
     navBtn1.innerHTML = '';
     navBtn2.innerHTML = '';
     navBtn3.innerHTML = '';
-    navBtn4.innerHTML = 'South: Lakeshore';
+    navBtn4.innerHTML = 'S. Lakeshore';
     navBtn1.onclick = '';
     navBtn2.onclick = '';
     navBtn3.onclick = '';
@@ -386,7 +388,7 @@ tower = ()=>{
 };
 
 towerLibrary = ()=>{
-    VisitCount++;
+    towerLibraryVisitCount++;
     dialogueHeader.innerHTML = 'Tower Library, Lake in Nothern Mountains';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/nMtns/towerLibrary.jpeg')`;
@@ -412,13 +414,13 @@ towerLibrary = ()=>{
 };
 
 forestPath1 = ()=>{
-    VisitCount++;
+    forestPath1VisitCount++;
     dialogueHeader.innerHTML = 'Forest Entrance';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/forest/forestPath1.jpeg')`;
     navBtn1.innerHTML = '';
-    navBtn2.innerHTML = 'West: Forest Path';
-    navBtn3.innerHTML = 'East: Statue';
+    navBtn2.innerHTML = 'W. Forest Path';
+    navBtn3.innerHTML = 'E. To Statue';
     navBtn4.innerHTML = '';
     navBtn1.onclick = '';
     navBtn2.onclick = forestPath2;
@@ -438,14 +440,14 @@ forestPath1 = ()=>{
 };
 
 forestPath2 = ()=>{
-    VisitCount++;
+    forestPath2VisitCount++;
     dialogueHeader.innerHTML = 'Forest Path';
     dialogueText.innerHTML = '';
-    viewer.style.backgroundImage = `url('assets/backgrounds/forest/forestPath1.jpeg')`;
-    navBtn1.innerHTML = 'North: Forest Path';
-    navBtn2.innerHTML = 'West: Forest';
-    navBtn3.innerHTML = 'East: Forest Path';
-    navBtn4.innerHTML = 'South: Forest';
+    viewer.style.backgroundImage = `url('assets/backgrounds/forest/forestPath2.jpeg')`;
+    navBtn1.innerHTML = 'N. Forest Path';
+    navBtn2.innerHTML = 'W. Enter Forest';
+    navBtn3.innerHTML = 'E. Forest Path';
+    navBtn4.innerHTML = 'S. Enter Forest';
     navBtn1.onclick = forestPath3;
     navBtn2.onclick = forestLostSR;
     navBtn3.onclick = forestPath1;
@@ -459,19 +461,19 @@ forestPath2 = ()=>{
     actBtn3.onclick = '';
     actBtn4.onclick = '';
     i=0
-    diaTxt = `You've walked so far into the forest you can't see any sign of the edge or entrance but the path you came by. Here, that path has turned to the North - if you have your bearings right. You can also see a way through the trees to the West and South, though the path is much less clear there.`;
+    diaTxt = `You've walked so far into the forest you can't see any sign of the edge or entrance but the path you came by. Here, that path has turned to the North - if you have your bearings right. You can also see what might be a trail through the trees to the West and South, though you can't be sure until you look.`;
     dialogueFunc();
 };
 
 forestPath3 = ()=>{
-    VisitCount++;
+    forestPath3VisitCount++;
     dialogueHeader.innerHTML = 'Forest Path';
     dialogueText.innerHTML = '';
-    viewer.style.backgroundImage = `url('assets/backgrounds/forest/forestPath1.jpeg')`;
-    navBtn1.innerHTML = 'North: Forest Path';
-    navBtn2.innerHTML = 'West: Forest';
-    navBtn3.innerHTML = 'East: Forest Path';
-    navBtn4.innerHTML = 'South: Forest';
+    viewer.style.backgroundImage = `url('assets/backgrounds/forest/forestPath3.jpeg')`;
+    navBtn1.innerHTML = 'N. Forest Path';
+    navBtn2.innerHTML = 'W. Forest';
+    navBtn3.innerHTML = 'E. Forest Path';
+    navBtn4.innerHTML = 'S. Forest';
     navBtn1.onclick = forestPath3;
     navBtn2.onclick = forestLostSR;
     navBtn3.onclick = forestPath1;
@@ -490,14 +492,14 @@ forestPath3 = ()=>{
 };
 
 forestRiver1 = ()=>{
-    VisitCount++;
+    forestRiver1VisitCount++;
     dialogueHeader.innerHTML = 'Forest Path';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/forest/forestPath1.jpeg')`;
-    navBtn1.innerHTML = 'North: Forest Path';
-    navBtn2.innerHTML = 'West: Forest';
-    navBtn3.innerHTML = 'East: Forest Path';
-    navBtn4.innerHTML = 'South: Forest';
+    navBtn1.innerHTML = 'N. Forest Path';
+    navBtn2.innerHTML = 'W. Enter Forest';
+    navBtn3.innerHTML = 'E. Forest Path';
+    navBtn4.innerHTML = 'S. Leave Pathway';
     navBtn1.onclick = forestPath3;
     navBtn2.onclick = forestLostSR;
     navBtn3.onclick = forestPath1;
@@ -594,10 +596,10 @@ sMtns1 = ()=>{
     dialogueHeader.innerHTML = 'Southern Mountains';
     dialogueText.innerHTML = '';
     viewer.style.backgroundImage = `url('assets/backgrounds/sMtns/sMtns1.jpeg')`;
-    navBtn1.innerHTML = 'North: Statue';
+    navBtn1.innerHTML = 'N. To Statue';
     navBtn2.innerHTML = '';
     navBtn3.innerHTML = '';
-    navBtn4.innerHTML = 'South: Mountains';
+    navBtn4.innerHTML = 'S. Mountains';
     navBtn1.onclick = statue1;
     navBtn2.onclick = '';
     navBtn3.onclick = '';
