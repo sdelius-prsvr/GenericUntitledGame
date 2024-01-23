@@ -57,13 +57,12 @@ hr {
         padding: 4px;
         display: flex;
         flex-direction: column;
-        width:fit-content;
-        height: fit-content;
+        /* width: fit-content;
+        height: fit-content; */
     }
 
     #centerContainer {
         position: relative;
-        margin: auto 2px auto auto;
     }
 
     #viewer {
@@ -118,17 +117,17 @@ hr {
     }
 
     #menuContainer {
-        margin: auto auto auto 2px;
         width: 160px;
         height: calc(100vh - 32px);
         min-height: 600px;
         max-height: 704px;
         display: flex;
+        justify-content: flex-end;
         flex-direction: column;
     }
 
     .menu {
-        margin: auto;
+        margin: 2px;
         width: 150px;
         height: calc(25vh - 2px);
         min-height: 128px;
@@ -136,9 +135,7 @@ hr {
     }
 
     #gemstone {
-        margin: auto;
-        display: block;
-        justify-self: center;
+        margin: 2px;
         border: solid silver 1px;
         border-radius: 50%;
         background-color: #ddde;
