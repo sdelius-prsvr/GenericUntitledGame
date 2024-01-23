@@ -113,7 +113,8 @@ hr {
         width: calc(99vh - 256px);
         min-width: 340px;
         max-width: 512px;
-        height: calc((89vh + (64px / 4vh)) - (99vh - 256px));
+        height: calc((89vh + (184px - 23vh)) - (99vh - 256px));
+        min-height: 168px;
     }
 
     #menuContainer {

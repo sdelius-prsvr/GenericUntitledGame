@@ -212,10 +212,10 @@ statue1 = ()=>{
     navBtn2.onclick = forestPath1;
     navBtn3.onclick = '';
     navBtn4.onclick = sMtns1;	
-    actBtn1.innerHTML = 'Search';
-    actBtn2.innerHTML = 'Enter';
-    actBtn3.innerHTML = 'Fight';
-    actBtn4.innerHTML = 'Flee';
+    actBtn1.innerHTML = '';
+    actBtn2.innerHTML = '';
+    actBtn3.innerHTML = '';
+    actBtn4.innerHTML = '';
     actBtn1.onclick = '';
     actBtn2.onclick = '';
     actBtn3.onclick = '';
